@@ -1,0 +1,7 @@
+{
+  "@@locale": "ja",
+  "sample": {
+    "title": "多言語化サンプル",
+    "message": "[@:sample.title] ボタンを押した回数: {count} {suffix}"
+  }
+}

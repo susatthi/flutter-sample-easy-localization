@@ -1,7 +1,20 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [
+        Locale('en', 'US'),
+        Locale('ja', 'JP'),
+      ],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('ja', 'JP'),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +27,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'sample.title'.tr()),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
     );
   }
 }
@@ -47,8 +63,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'You have pushed the button this many times:',
+            Text(
+              'sample.message'.tr(
+                namedArgs: {
+                  'count': '$_counter',
+                  'suffix': '回',
+                },
+              ),
             ),
             Text(
               '$_counter',
