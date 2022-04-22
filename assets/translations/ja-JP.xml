@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<strings>
+    <sample.title>多言語化サンプル</sample.title>
+    <sample.message>[@:sample.title] ボタンを押した回数: {count} {suffix}</sample.message>
+</strings>

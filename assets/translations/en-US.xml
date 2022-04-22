@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<strings>
+    <sample.title>Flutter Sample Localizations</sample.title>
+    <sample.message>[@:sample.title] You have pushed the button this many times: {count} {suffix}</sample.message>
+</strings>

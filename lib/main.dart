@@ -14,7 +14,7 @@ void main() async {
       path: 'assets/translations',
       fallbackLocale: const Locale('ja', 'JP'),
       child: const MyApp(),
-      assetLoader: YamlAssetLoader(),
+      assetLoader: XmlAssetLoader(),
     ),
   );
 }
