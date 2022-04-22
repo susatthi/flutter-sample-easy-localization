@@ -1,0 +1,4 @@
+# en
+sample:
+  title: 'Flutter Sample Localizations' # コメントつけられるけど出力されない
+  message: '[@:sample.title] You have pushed the button this many times: {count} {suffix}'

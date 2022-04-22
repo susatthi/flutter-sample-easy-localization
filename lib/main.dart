@@ -11,10 +11,10 @@ void main() async {
         Locale('en', 'US'),
         Locale('ja', 'JP'),
       ],
-      path: 'assets/translations/strings.csv',
+      path: 'assets/translations',
       fallbackLocale: const Locale('ja', 'JP'),
       child: const MyApp(),
-      assetLoader: CsvAssetLoader(),
+      assetLoader: YamlAssetLoader(),
     ),
   );
 }
