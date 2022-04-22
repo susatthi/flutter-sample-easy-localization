@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:easy_localization_loader/easy_localization_loader.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -10,9 +11,10 @@ void main() async {
         Locale('en', 'US'),
         Locale('ja', 'JP'),
       ],
-      path: 'assets/translations',
+      path: 'assets/translations/strings.csv',
       fallbackLocale: const Locale('ja', 'JP'),
       child: const MyApp(),
+      assetLoader: CsvAssetLoader(),
     ),
   );
 }
